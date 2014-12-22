@@ -16,7 +16,7 @@ Next you need access to the [Azure Management Portal](https://manage.windowsazur
 
 Just log on to Office 365 in your browser (I like to just log on to Outlook Web App) with an administrative account. You should see an "Admin" menu just to the left of your profile picture:
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AdminMenuInOwa.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AdminMenuInOwa.png)
 
 The "Azure AD" option in this menu will take you to a one-time registration page to activate portal access. When I did this for my MSDN developer tenant, I was presented with a big scary green button that said "Purchase". However, when I clicked on it I was never asked for a credit card or any sort of billing information. It just went through the process of enabling portal access. 
 
@@ -26,19 +26,19 @@ Once you have portal access, you're ready to register your app.
 
 Log on to the Azure Management Portal. Look for your directory. If you have "All Items" selected on the left-hand side, you might see something like this. The value in the "Name" column may be different, but the important thing is that you're looking for the entry that has "Directory" in the "Type" column.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AzureDirectory.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AzureDirectory.png)
 
 Click on that entry and your view changes. Click on "Applications" in the top bar.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AzureDirectorySelected.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AzureDirectorySelected.png)
 
 If this is your first app, you'll likely only see two entries here, one for Office 365 Exchange Online, and one for Office 365 SharePoint Online. Ignore those, and look for the "Add" button at the bottom.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AppList.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AppList.png)
 
 Click the "Add" button to start the wizard. When asked "What do you want to do?", choose "Add an application my organization is developing". This takes you to this screen.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AddAnApp.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AddAnApp.png)
 
 Type a name for your app. Then you need to specify which type of app you're developing. "Web Application and/or Web API" is for exactly what it says. The "Native Client Application" choice is what you want for anything that isn't a web app or web API. This includes phone apps, tablet apps, etc. The experience is a little different for each choice, so we'll do both.
 
@@ -46,7 +46,7 @@ Type a name for your app. Then you need to specify which type of app you're deve
 
 If you choose a web app/API, the next screen will look like this.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/WebAppNextStep.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/WebAppNextStep.png)
 
 Here's what you should put in these fields.
 
@@ -59,7 +59,7 @@ Click the check button to complete the wizard.
 
 If you choose a native application, the next screen will look like this.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/NativeAppNextStep.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/NativeAppNextStep.png)
 
 Here all you need is the **Redirect URI**. This is similar to the **App ID URI** for a web app. It isn't a real web address, it is more of a unique identifier for your app. I recommend the same construction for this field: your Office 365 domain + a unique name for your app.
 
@@ -69,7 +69,7 @@ Click the check button to complete the wizard.
 
 At this point your app is registered, but you need to do some additional configuration to enable access to the Office 365 APIs. If you've just completed the registration process, you should now be at the Quick Start page for the app. Depending on if you chose a web app or a native client app, the Quick Start looks a little different, but for either choice you should see a "Configure" option near the top.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AppQuickStart.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AppQuickStart.png)
 
 Click there to configure the app. The configure pages are different for web apps and native apps. However, they are similar enough that I'll just list each field and call out if it is web app or client app only. The important fields for Office 365 access are:
 
@@ -77,7 +77,7 @@ Click there to configure the app. The configure pages are different for web apps
 - **Client ID**: This is a crucial part of the OAuth2 flow. You'll want to copy this value so your app can use it to request authorization.
 - **Keys** (web app only): This is the other crucial part of the OAuth2 flow for web apps. This is where you generate what is commonly referred to as your client secret. Use the drop-down to select a one-year or two-year key. Notice that the value doesn't show up right away. You have to click the "Save" button to display the key. You can do this after you're done configuring the app. **However, it is important to note that this key will only ever display the one time, after you click "Save". If you don't copy the value then, you cannot retrieve it. You will have to generate a new one.** 
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/NewClientSecret.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/NewClientSecret.png)
 
 - **Reply URL** (web app only): This is set to the value you specified for **Sign-on URL** when creating the app registration. You can modify it or add new reply URLs here. This will be the root of your OAuth2 redirect URLs. If your app specifies a redirect URL (in the redirect_uri parameter of the [authorization code request](http://msdn.microsoft.com/en-us/library/azure/dn645542.aspx)) that is not based on one of the values set here, Azure will return an error.
 - **Redirect URIs** (native app only): This is similar to the **Reply URL** for web apps. You will use this value when requesting authorization tokens.
@@ -87,15 +87,15 @@ Click there to configure the app. The configure pages are different for web apps
 
 For a new app, you should see something like this.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/AddPermissions.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/AddPermissions.png)
 
 You have an entry for Windows Azure Active Directory, with one delegated permission. That permission allows the app to sign in as the user and read the user's profile. You can add additional permissions to Azure AD here if you want to use the Graph API, but we're here to talk about Office 365. Click the "Add Application" button to add Office 365 services. That brings up a list of applications to choose from.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/ChooseApps.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/ChooseApps.png)
 
 The "Office 365 Exchange Online" choice will allow your app to access the Mail, Calendar, and/or Contacts APIs. The "Office 365 SharePoint Online" choice will allow your app to access the Files API. Click one (or both!) and click the check button to complete your selection and return to the configuration screen. You should now have a new entry for each service you selected.
 
-![](https://github.com/jasonjoh/office365-azure-guides/images/ExchangeAdded.png)
+![](https://github.com/jasonjoh/office365-azure-guides/blob/master/images/ExchangeAdded.png)
 
 Click the drop-down for the permission type you want to give. Briefly, the difference between the two:
 
