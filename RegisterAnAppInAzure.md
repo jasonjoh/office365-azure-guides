@@ -113,4 +113,5 @@ That's it! You're done! You should have a client ID and a client secret (if you'
 
 ----------
 Connect with me on Twitter [@JasonJohMSFT](https://twitter.com/JasonJohMSFT)
+
 Follow the [Exchange Dev Blog](http://blogs.msdn.com/b/exchangedev/)
