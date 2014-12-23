@@ -1,5 +1,7 @@
 # Manually Register an Office 365 API app in Azure AD #
 
+*If you're developing in Visual Studio 2013, I highly recommend using the [Office 365 API Tools](https://visualstudiogallery.msdn.microsoft.com/a15b85e6-69a7-4fdf-adda-a38066bb5155) to handle all of this for you. If you're not, or you're the curious type, read on.*
+
 Once you're familiar with the process, registering an app in Azure AD to enable access to the Office 365 REST APIs ([Mail](http://msdn.microsoft.com/office/office365/APi/mail-rest-operations), [Calendar](http://msdn.microsoft.com/en-us/office/office365/api/calendar-rest-operations), [Contacts](http://msdn.microsoft.com/en-us/office/office365/api/contacts-rest-operations), and [Files](http://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations)) is a fairly straightforward process. However, if you've never done it before, it can be a little intimidating. Let's step through the process together. But first, let's briefly discuss **why** you have to do this in the first place.
 
 ## Why do I have to register? ##
