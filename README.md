@@ -5,6 +5,7 @@ This is just a quick little repo I made so I could put out guides to address com
 ## Guide list ##
 
 - [Manually Register an Office 365 API app in Azure AD](https://github.com/jasonjoh/office365-azure-guides/blob/master/RegisterAnAppInAzure.md)
+- [Validating your Office 365 Access Token](https://github.com/jasonjoh/office365-azure-guides/blob/master/ValidatingYourToken.md)
 
 ## Guides from other people ##
 
