@@ -101,7 +101,7 @@ The "Office 365 Exchange Online" choice will allow your app to access the Mail, 
 
 Click the drop-down for the permission type you want to give. Briefly, the difference between the two:
 
-- **Application permissions** (Not yet implemented for Office 365): The permission is granted to the application itself for all users in the organization. Once an administrator gives consent, individual users do not have to sign in for the app to be able to access their mailbox or OneDrive.
+- **Application permissions**: The permission is granted to the application itself for all users in the organization. Once an administrator gives consent, individual users do not have to sign in for the app to be able to access their mailbox or OneDrive.
 - **Delegated permissions**: The permission is granted for the application to act as the user in their mailbox or OneDrive only. Each user must sign in to give consent to their own mailbox or OneDrive.
 
 Select the appropriate permissions for your application. Bear in mind that if you select a "read and write" permission (say to the user's mail), you do not have to also select the "read" permission. Doing so won't break anything, but it's just not necessary!
