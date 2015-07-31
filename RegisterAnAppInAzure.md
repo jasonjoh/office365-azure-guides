@@ -14,13 +14,13 @@ So the answer to our question is: in order to get a client ID and secret from Az
 
 First, you need access to an administrator account for an Office 365 Subscription. This can be an existing subscription you have for your work or business, or it can be an [Office 365 Developer Tenant](https://portal.office.com/Signup/MainSignup15.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&DL=DEVELOPERPACK&ali=1). You can even use the free developer tenant that [comes with your MSDN subscription](http://msdn.microsoft.com/en-us/subscriptions/jj919154.aspx) (if you have one). Just bear in mind that whatever subscription you use to register your app will show as the publisher for that app when users are prompted to give access.
 
-Next you need access to the [Azure Management Portal](https://manage.windowsazure.com). If you have an Azure subscription, you already have access and you're probably already familiar with the portal. If you don't, don't worry! You don't need an Azure subscription to register an app. Every Office 365 subscription comes with an Azure Active Directory, which is all you need. You can enable management portal access to your Azure AD fairly easily.
+Next you need access to the [Azure Management Portal](https://manage.windowsazure.com). If you have an Azure subscription, you already have access and you're probably already familiar with the portal. If you don't, don't worry! You don't need to pay for an Azure subscription to register an app. Every Office 365 subscription comes with an Azure Active Directory, which is all you need. You can enable management portal access to your Azure AD by signing up for a "pay as you go" Azure subscription. Access to your Azure AD is always free, so you won't be charged anything.
 
-Just log on to Office 365 in your browser (I like to just log on to Outlook Web App) with an administrative account. You should see an "Admin" menu just to the left of your profile picture:
+Just log on to Office 365 in your browser (I like to just log on to Outlook Web App) with an administrative account. You should see an "Admin" tile in the App Launcher:
 
 ![](https://raw.githubusercontent.com/jasonjoh/office365-azure-guides/master/images/AdminMenuInOwa.PNG)
 
-The "Azure AD" option in this menu will take you to a one-time registration page to activate portal access. When I did this for my MSDN developer tenant, I was presented with a big scary green button that said "Purchase". However, when I clicked on it I was never asked for a credit card or any sort of billing information. It just went through the process of enabling portal access. 
+Clicking on this tile will take you to the Office 365 admin center. Scroll down in the left-hand menu to find the **Azure AD** entry under **Admin**. Clicking this will take you to a one-time registration page to activate portal access. 
 
 Once you have portal access, you're ready to register your app. 
 
