@@ -2,6 +2,8 @@
 
 This is just a quick little repo I made so I could put out guides to address common questions I see on Stack Overflow or the MSDN forums. I'll likely add more guides as they come up. If there's a topic you'd really like to see covered, send me a message on Twitter: [@JasonJohMSFT](https://twitter.com/JasonJohMSFT).
 
+Update for testing PR
+
 ## Guide list ##
 
 - [Manually Register an Office 365 API app in Azure AD](https://github.com/jasonjoh/office365-azure-guides/blob/master/RegisterAnAppInAzure.md)
